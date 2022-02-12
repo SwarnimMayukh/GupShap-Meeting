@@ -1,53 +1,17 @@
 <html>
-  <script>
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.addEventListener("load", function (event) {
-  
-      const meeting = new VideoSDKMeeting();
-      
-      const config = {
-        name: "type your name here",
-        apiKey: "0d924f05-2cbe-4273-a5a7-af376aa42fe8", 
-        meetingId: "SOCIAL_DEMO", 
-        redirectOnLeave: "https://swarnimmayukh.github.io/Gupshap.com/",
-        micEnabled: true,
-        webcamEnabled: true,
-        participantCanToggleSelfWebcam: true,
-        participantCanToggleSelfMic: true,
-        joinScreen: {
-          visible: true, // Show the join screen ?
-          title: "GupShap Meeting", // Meeting title
-          meetingUrl: window.location.href, // Meeting joining url
-        },
-        screenShareEnabled: true,
-        recordingEnabled: true,
-recordingWebhookUrl: "yourwebsite.com/callback",
-permissions: {
-    toggleRecording: true,
-},
-livestream: {
-autoStart: true,
-outputs: [
-{
-    url: "rtmp://x.rtmp.youtube.com/live2",
-    streamKey: "<STREAM KEY FROM YOUTUBE>",
-},
-],
-},
-pin: {
-  allowed: true,
-  layout: "SPOTLIGHT",
-},
-      };
-      
-      meeting.init(config);
-    });
-  
-    script.src = "https://sdk.videosdk.live/rtc-js-prebuilt/0.1.29/rtc-js-prebuilt.js";
-    document.getElementsByTagName("head")[0].appendChild(script);
-  
-  </script>
-        
-            
+    <head>
+        <title>GupShap Meetings.</title>
+    </head>
+    <body>
+        <center>
+            <div class="form-group">
+                <label>If you want to join a meeting, then just ask your host to send you the link.</label>
+                <img src="">
+                <label id="final_code">No Codes Generated Yet !!</label>
+                <button id="new_meeting" class="btn btn-success" onclick="new_meeting1()">Wanna Create A Meeting! Then Click Here!!</button>
+            </div>
+        </center>
+    </body>
+    <script src="main.js">
+    </script>
 </html>
